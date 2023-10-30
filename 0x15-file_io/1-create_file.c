@@ -1,9 +1,11 @@
+#include "main.h"
+
 /**
- * create_file - Prog that creates a file
+ * create_file - Prog creates a file
  * @filename: filename
- * @text_content: Content written in the file
+ * @text_content: Content writed in the file
  *
- * Return: 1 if it is success. -1 if it fails
+ * Return: 1 if it success. -1 if it fails
  */
 int create_file(const char *filename, char *text_content)
 {
@@ -14,7 +16,7 @@ int create_file(const char *filename, char *text_content)
 	if (!filename)
 		return (-1);
 
-	file_d = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	file_d = open (filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
 	if (file_d == -1)
 		return (-1);
